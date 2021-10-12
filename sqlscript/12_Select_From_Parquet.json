@@ -1,0 +1,17 @@
+{
+	"name": "12_Select_From_Parquet",
+	"properties": {
+		"content": {
+			"query": "-- Read parquet file\nSELECT TOP 10 *\nFROM OPENROWSET(\n    BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.parquet',\n    FORMAT = 'parquet') as rows",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

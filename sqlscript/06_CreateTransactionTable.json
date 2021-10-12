@@ -1,0 +1,17 @@
+{
+	"name": "06_CreateTransactionTable",
+	"properties": {
+		"content": {
+			"query": "CREATE TABLE DBO.CUSTOMERS\n(\n    CUST_ID                 INT NOT NULL ,\n    CUST_FIRST_NAME         NVARCHAR(20) NOT NULL,\n    CUST_LAST_NAME          NVARCHAR(40) NOT NULL,\n    CUST_GENDER             CHAR(1) NOT NULL,\n    CUST_YEAR_OF_BIRTH      INT NOT NULL,\n    CUST_MARITAL_STATUS     NVARCHAR(20),\n    CUST_STREET_ADDRESS     NVARCHAR(40) NOT NULL,\n    CUST_POSTAL_CODE        NVARCHAR(10) NOT NULL,\n    CUST_CITY               NVARCHAR(30) NOT NULL,\n    CUST_CITY_ID            INT NOT NULL,\n    CUST_STATE_PROVINCE     NVARCHAR(40) NOT NULL,\n    CUST_STATE_PROVINCE_ID  INT NOT NULL,\n    COUNTRY_ID              INT NOT NULL,\n    CUST_MAIN_PHONE_NUMBER  NVARCHAR(25) NOT NULL,\n    CUST_INCOME_LEVEL       NVARCHAR(30),\n    CUST_CREDIT_LIMIT       INT,\n    CUST_EMAIL              NVARCHAR(30),\n    CUST_TOTAL              NVARCHAR(20),    \n    CUST_TOTAL_ID           INT NOT NULL,\n    CUST_SRC_ID             INT,\n    CUST_EFF_FROM           DATETIME,\n    CUST_EFF_TO             DATETIME,\n    CUST_VALID              NVARCHAR(1)\n)\nWITH\n(\n\tCLUSTERED COLUMNSTORE INDEX,\n\tDISTRIBUTION = ROUND_ROBIN\n)",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

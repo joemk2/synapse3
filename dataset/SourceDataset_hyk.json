@@ -1,0 +1,17 @@
+{
+	"name": "SourceDataset_hyk",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Teradata1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "TeradataTable",
+		"schema": [],
+		"typeProperties": {
+			"database": "tutorial_db14",
+			"table": "DEPTa"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

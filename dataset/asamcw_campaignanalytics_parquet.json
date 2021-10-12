@@ -1,0 +1,21 @@
+{
+	"name": "asamcw_campaignanalytics_parquet",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "mzc-adls-WorkspaceDefaultStorage",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "campaign-analytics",
+				"fileSystem": "pipeline"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}

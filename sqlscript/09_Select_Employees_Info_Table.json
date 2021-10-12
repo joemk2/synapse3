@@ -1,0 +1,17 @@
+{
+	"name": "09_Select_Employees_Info_Table",
+	"properties": {
+		"content": {
+			"query": "SELECT count(*)\n FROM [dbo].[CUSTOMERS];",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

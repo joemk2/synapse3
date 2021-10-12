@@ -1,0 +1,17 @@
+{
+	"name": "11_Select_From_JSON",
+	"properties": {
+		"content": {
+			"query": "-- Read a JSON file\nSELECT TOP 10 *\nFROM OPENROWSET(\n        BULK 'https://pandemicdatalake.blob.core.windows.net/public/curated/covid-19/ecdc_cases/latest/ecdc_cases.jsonl',\n        FORMAT = 'csv',\n        FIELDTERMINATOR ='0x0b',\n        FIELDQUOTE = '0x0b'\n    ) with (doc nvarchar(max)) as rows",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

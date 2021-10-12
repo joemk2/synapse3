@@ -1,0 +1,17 @@
+{
+	"name": "00_CreateDataLoader",
+	"properties": {
+		"content": {
+			"query": "--Execute this line from the master database\nCREATE LOGIN dataloader WITH PASSWORD = 'Demo@pass123';\nCREATE USER dataloader FOR LOGIN dataloader;\n\n--Execute the remainder of these lines from the sqlpool database\nCREATE USER dataloader FOR LOGIN dataloader;\nGRANT CONTROL ON DATABASE::sqlpool to dataloader;\nEXEC sp_addrolemember 'largerc', 'dataloader';\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "master",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

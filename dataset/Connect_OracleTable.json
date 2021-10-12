@@ -1,0 +1,17 @@
+{
+	"name": "Connect_OracleTable",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "Oracle_server",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "OracleTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "SCOTT",
+			"table": "CUSTOMERS"
+		}
+	},
+	"type": "Microsoft.Synapse/workspaces/datasets"
+}
